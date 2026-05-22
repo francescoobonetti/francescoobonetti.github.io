@@ -1,0 +1,290 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@page {
+    size: A4;
+    margin: 0;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: #f5f5f5;
+    color: #333;
+    line-height: 1.4;
+    font-size: 10px;
+    padding: 20px;
+}
+
+.container {
+    width: 210mm;
+    height: 297mm;
+    margin: 0 auto;
+    background: white;
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+}
+
+/* Header */
+.header {
+    background: linear-gradient(135deg, #1e3a8a 0%, #2563eb 100%);
+    color: white;
+    padding: 18px 20px;
+    text-align: center;
+    border-bottom: 4px solid #1e40af;
+}
+
+.header h1 {
+    font-size: 24px;
+    font-weight: 700;
+    letter-spacing: -0.5px;
+    margin-bottom: 3px;
+}
+
+.header .title {
+    font-size: 12px;
+    font-weight: 600;
+    opacity: 0.95;
+    letter-spacing: 0.5px;
+    margin-bottom: 6px;
+}
+
+.header .contact {
+    font-size: 9px;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+    opacity: 0.9;
+}
+
+.contact-item {
+    display: flex;
+    align-items: center;
+}
+
+.contact-item::before {
+    content: "•";
+    margin-right: 6px;
+    opacity: 0.7;
+}
+
+/* Main Content */
+.content {
+    flex: 1;
+    padding: 14px 18px;
+    overflow: hidden;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+}
+
+.left-col {
+    overflow: hidden;
+}
+
+.right-col {
+    overflow: hidden;
+}
+
+/* Section Heading */
+.section-heading {
+    background: #2563eb;
+    color: white;
+    padding: 4px 8px;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    margin-top: 8px;
+    margin-bottom: 6px;
+    text-transform: uppercase;
+    border-left: 3px solid #1e40af;
+}
+
+.left-col .section-heading:first-of-type {
+    margin-top: 0;
+}
+
+/* Summary */
+.summary {
+    font-size: 9px;
+    line-height: 1.3;
+    text-align: justify;
+    margin-bottom: 6px;
+    color: #444;
+}
+
+/* Job Entry */
+.job {
+    margin-bottom: 8px;
+    font-size: 9px;
+    line-height: 1.3;
+}
+
+.job-title {
+    font-weight: 700;
+    color: #1e3a8a;
+    font-size: 9px;
+    margin-bottom: 2px;
+}
+
+.job-meta {
+    font-size: 8px;
+    color: #666;
+    margin-bottom: 3px;
+    font-style: italic;
+}
+
+.job-duties {
+    font-size: 8.5px;
+    margin-left: 8px;
+    line-height: 1.25;
+    list-style: none;
+}
+
+.job-duties li {
+    margin-bottom: 2px;
+    color: #555;
+    padding-left: 8px;
+}
+
+.job-duties li::before {
+    content: "•";
+    margin-left: -8px;
+    margin-right: 4px;
+    color: #2563eb;
+    font-weight: bold;
+}
+
+/* Education */
+.education {
+    font-size: 9px;
+    margin-bottom: 6px;
+}
+
+.education-title {
+    font-weight: 700;
+    color: #1e3a8a;
+    margin-bottom: 2px;
+}
+
+.education-meta {
+    font-size: 8px;
+    color: #666;
+}
+
+/* Skills */
+.skills-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 6px;
+    font-size: 8px;
+}
+
+.skill-category {
+    margin-bottom: 4px;
+}
+
+.skill-label {
+    font-weight: 700;
+    color: #1e3a8a;
+    font-size: 8px;
+    margin-bottom: 2px;
+}
+
+.skill-items {
+    font-size: 8px;
+    line-height: 1.2;
+    color: #555;
+}
+
+/* Languages */
+.language {
+    font-size: 8.5px;
+    margin-bottom: 2px;
+    line-height: 1.2;
+}
+
+.lang-level {
+    font-weight: 600;
+    color: #1e3a8a;
+}
+
+/* Certifications */
+.cert {
+    font-size: 8.5px;
+    margin-bottom: 2px;
+    line-height: 1.2;
+    color: #555;
+}
+
+.cert::before {
+    content: "✓ ";
+    color: #2563eb;
+    font-weight: 700;
+    margin-right: 4px;
+}
+
+/* References */
+.references {
+    font-size: 8px;
+    color: #666;
+    font-style: italic;
+    margin-top: 4px;
+    text-align: center;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 1024px) {
+    .container {
+        width: 100%;
+        height: auto;
+        margin: 0;
+        padding: 10px;
+    }
+
+    body {
+        padding: 10px;
+    }
+
+    .content {
+        grid-template-columns: 1fr;
+        gap: 8px;
+    }
+
+    .header {
+        padding: 14px 15px;
+    }
+
+    .header h1 {
+        font-size: 20px;
+    }
+
+    .header .title {
+        font-size: 11px;
+    }
+
+    .header .contact {
+        font-size: 8px;
+        gap: 10px;
+    }
+}
+
+@media print {
+    body {
+        margin: 0;
+        padding: 0;
+        background: white;
+    }
+
+    .container {
+        box-shadow: none;
+        margin: 0;
+        width: 210mm;
+        height: 297mm;
+    }
+}
